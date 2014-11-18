@@ -73,7 +73,7 @@ public class Conversor extends HttpServlet {
 			/* Apertura del fichero y creación de BufferedReader para poder
 			 *  hacer la lectura (disponer del método readLine())
 			 * */
-			archivo = new File("../workspace/ConversorDivisas/WebContent/listadoBueno.txt");
+			archivo = new File("/Users/DAW 2º - Mañana/git/ConversorDivisas/WebContent/listadoBueno.txt");
 			fr = new FileReader(archivo.getAbsolutePath()); // pasa la ruta absoluta del fichero
 			br = new BufferedReader(fr);
 
