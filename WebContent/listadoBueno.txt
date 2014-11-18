@@ -1,0 +1,164 @@
+AED-Dirham árabe-aso
+AFN-Afgani afgano-asc
+ALL-Lek albanés-eur
+AMD-Dram armenio-aso
+ANG-Florín antillano holandés-ant
+AOA-Kwanza angoleño-afr
+ARS-Peso argentino-ams
+AUD-Dólar australiano-oce
+AWG-Florín arubeño-otr
+AZN-Manat azerbaiyano-aso
+BAM-Marco convertible bosnio-eur
+BBD-Dólar de Barbados-ant
+BDT-Taka de Bangladés-ass
+BGN-Lev búlgaro-eur
+BHD-Dinar bareiní-aso
+BIF-Franco burundés-afr
+BMD-Dólar de Bermuda-otr
+BND-Dólar de Brunéi-sea
+BOB-Boliviano-ams
+BRL-Real brasileño-ams
+BSD-Dólar bahameño-ant
+BTN-Ngultrum de Bután-ass
+BWP-Pula de Botsuana-afr
+BYR-Rublo bielorruso-eur
+BZD-Dólar beliceño-amc
+CAD-Dólar canadiense-amn
+CDF-Franco congoleño-afr
+CHF-Franco suizo-eur
+CLP-Peso chileno-ams
+CNY-Yuan chino-asi
+COP-Peso colombiano-ams
+CRC-Colón costarricense-amc
+CUP-Peso cubano-ant
+CVE-Escudo caboverdiano-afr
+CZK-Corona checa-eur
+DJF-Franco yibutiano-afr
+DKK-Corona danesa-eur
+DOP-Peso dominicano-ant
+DZD-Dinar argelino-afr
+EGP-Libra egipcia-afr
+ERN-Nakfa eritreo-afr
+ETB-Birr etíope-afr
+EUR-Euro-eur
+FJD-Dólar fiyiano-oce
+FKP-Libra malvinense-ams
+GBP-Libra esterlina-eur
+GEL-Lari georgiano-aso
+GHS-Cedi ghanés-afr
+GIP-Libra de Gibraltar-eur
+GMD-Dalasi gambiano-afr
+GNF-Franco guineano-afr
+GTQ-Quetzal guatemalteco-amc
+GYD-Dólar guyanés-ams
+HKD-Dólar de Hong Kong-otr
+HNL-Lempira hondureño-amc
+HRK-Kuna croata-eur
+HTG-Gourde haitiano-ant
+HUF-Forinto húngaro-eur
+IDR-Rupia indonesia-sea
+ILS-Nuevo shéquel israelí-aso
+INR-Rupia india-ass
+IQD-Dinar iraquí-aso
+IRR-Rial iraní-ass
+ISK-Corona islandesa-eur
+JMD-Dólar jamaicano-ant
+JOD-Dinar jordano-aso
+JPY-Yen japonés-asi
+KES-Chelín keniata-afr
+KGS-Som kirguís-asc
+KHR-Riel camboyano-sea
+KMF-Franco comorano-afr
+KPW-Won norcoreano-asi
+KRW-Won surcoreano-asi
+KWD-Dinar kuwaití-aso
+KYD-Dólar caimano-ant
+KZT-Tenge kazajo-asc
+LAK-Kip laosiano-sea
+LBP-Libra libanesa-aso
+LKR-Rupia de Sri Lanka-ass
+LRD-Dólar liberiano-afr
+LSL-Loti lesotense-afr
+LTL-Litas lituano-eur
+LVL-Lat letón-eur
+LYD-Dinar libio-afr
+MAD-Dirham marroquí-afr
+MDL-Leu moldavo-eur
+MGA-Ariary malgache-afr
+MKD-Denar macedonio-eur
+MMK-Kyat birmano-sea
+MNT-Tughrik mongol-asi
+MOP-Pataca de Macao-otr
+MRO-Ouguiya mauritana-afr
+MUR-Rupia mauricia-afr
+MVR-Rufiyaa maldiva-ass
+MWK-Kwacha malauí-afr
+MXN-Peso mexicano-ams
+MYR-Ringgit malayo-sea
+MZN-Metical mozambiqueño-afr
+NAD-Dólar namibio-afr
+NGN-Naira nigeriana-afr
+NIO-Córdoba nicaragüense-amc
+NOK-Corona noruega-eur
+NPR-Rupia nepalí-ass
+NZD-Dólar neozelandés-oce
+OMR-Rial omaní-aso
+PAB-Balboa panameña-amc
+PEN-Nuevo sol peruano-ams
+PGK-Kina de Papúa Nueva Guinea-oce
+PHP-Peso filipino-sea
+PKR-Rupia pakistaní-ass
+PLN-Zloty polaco-eur
+PYG-Guaraní paraguayo-ams
+QAR-Rial qatarí-aso
+RON-Leu rumano-eur
+RSD-Dinar serbio-eur
+RUB-Rublo ruso-asi
+RWF-Franco ruandés-afr
+SAR-Riyal saudí-aso
+SBD-Dólar de las Islas Salomón-oce
+SCR-Rupia de Seychelles-afr
+SDG-Libra sudanesa-afr
+SEK-Corona sueca-eur
+SGD-Dólar de Singapur-sea
+SHP-Libra de Santa Elena-otr
+SLL-Leone de Sierra Leona-afr
+SOS-Chelín somalí-afr
+SRD-Dólar surinamés-ams
+SSP-Libra sursudanesa-afr
+STD-Dobra de Santo Tomé y Príncipe-afr
+SYP-Libra siria-aso
+SZL-Lilangeni suazi-afr
+THB-Baht tailandés-sea
+TJS-Somoni tayik-asc
+TMT-Manat turcomano-asc
+TND-Dinar tunecino-afr
+TOP-Pa'anga tongano-oce
+TRY-Lira turca-aso
+TTD-Dólar de Trinidad y Tobago-ant
+TWD-Dólar taiwanés-asi
+TZS-Chelín tanzano-afr
+UAH-Grivnia ucraniana-eur
+UGX-Chelín ugandés-afr
+USD-Dólar estadounidense-amn
+UYU-Peso uruguayo-ams
+UZS-Som uzbeko-asc
+VEF-Bolívar fuerte venezolano-ams
+VND-Dong vietnamita-sea
+VUV-Vatu vanuatense-oce
+WST-Tala samoana-oce
+XAF-Franco de África Central-afr
+XAG-Onza de plata-oun
+XAU-Onza de oro-oun
+XCD-Dólar del Caribe Oriental-ant
+XOF-Franco de África Occidental-afr
+XPD-Onza de paladio-oun
+XPF-Franco CFP-oce
+XPT-Onza de platino-oun
+YER-Rial yemení-aso
+ZAR-Rand sudafricano-afr
+ZMW-Kwacha zambiano-afr
+ZWL-Dólar zimbabuense-afr
+NBK-Kilo de nabos-obs
+RMD-Denario romano-obs
+RMU-Aureo romano-obs

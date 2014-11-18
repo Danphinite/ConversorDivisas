@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+		body * {text-align: center; font-family: Cambria; margin: auto 5px;}
+		table {display: inline-block; margin: 0 auto;}
+		table td {padding: 14px;}
+		fieldset {background-color: #EEFFEF; width: 1000px; margin: 0 auto; font-size: 20px}
+		legend {font-size: 30px; font-weight: bold;}
+		input {display: inline; margin: auto auto; font-size: 20px; margin-bottom: 10px;}
+		#submit{border-color: green; font-size: 25px; background: linear-gradient(#BEC6BE, #97A797) }
+		#submit:hover{box-shadow: 0px 0px 3px 1px yellow}
+		#clean{border-color: #0EBFE9;}
+		select, option {font-size: 18px; font-family: Vrinda;}
+		select {font-weight: bold;}
+		img {border: 3px ridge black; margin: 10px 0; box-shadow: 2px 2px 5px 1px black;}
+		div.botones {display: inline-block; margin: auto auto; font-size: 25px; text-align: center;}
+		div.tasa, div.error {display: inline; font-size: 15px; font-style: italic; float: right;}
+		div.error {color: red;}
+		div.result {display: inline; margin: auto auto; padding: 5px; background-color: #AADDAD;}
+		#registro {text-align: center; font-family: Arial; padding: 5px;}
