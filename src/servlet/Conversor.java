@@ -113,7 +113,7 @@ public class Conversor extends HttpServlet {
 	 */
 	public HashMap<String, String> leeFichero () {
 		HashMap<String, String> monedas = new HashMap<String, String>();
-		File archivo = null;
+		String archivo = null;
 		FileReader fr = null;
 		BufferedReader br = null;
 
@@ -121,8 +121,8 @@ public class Conversor extends HttpServlet {
 			/* Apertura del fichero y creación de BufferedReader para poder
 			 *  hacer la lectura (disponer del método readLine())
 			 * */
-			archivo = new File("workspace/ConversorDivisas/WebContent/listadoBueno.txt");
-			fr = new FileReader(archivo.getAbsolutePath()); // pasa la ruta absoluta del fichero
+			archivo = this.getServletContext().getRealPath("listadoBueno.txt");
+			fr = new FileReader(archivo); // pasa la ruta absoluta del fichero
 			br = new BufferedReader(fr);
 
 			/* Lectura del fichero */
