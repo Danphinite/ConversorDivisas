@@ -31,7 +31,6 @@ public class Conversor extends HttpServlet {
      */
     public Conversor() {
         super();
-        // TODO Auto-generated constructor stub
     } 
     	
     	/**
@@ -42,7 +41,7 @@ public class Conversor extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
 		ServletContext contexto = config.getServletContext();
-		HashMap<String, ArrayList<String>> monedas = leeFichero2();
+		HashMap<String, ArrayList<String>> monedas = leeFichero();
 		
 		/* El siguiente método ordena los valores del mapa "monedas" por orden alfabético */
 		ArrayList<String> valores = new ArrayList<String>();
@@ -54,27 +53,28 @@ public class Conversor extends HttpServlet {
 	            return o1.compareTo(o2);
 	        }
 	    });
+		/* Se carga en contexto el listado con las monedas y los nombres de monedas ordenados */
 		contexto.setAttribute("monedas", monedas);
 		contexto.setAttribute("valores", valores);
 	}
 	
 	/**
-	 * Segundo método que lee el fichero con el listado de todos los códigos,
-	 * nombres de monedas y región, devolviendo un HashMap de ArrayList
+	 * Método que lee el fichero con el listado de todos los códigos,
+	 * nombre de moneda y región, devolviendo un HashMap de ArrayList
 	 * @return HashMap
 	 */
-	private HashMap<String, ArrayList<String>> leeFichero2() {
+	private HashMap<String, ArrayList<String>> leeFichero() {
 		HashMap<String, ArrayList<String>> monedas = new HashMap<String, ArrayList<String>>();
-		File archivo = null;
+		String archivo = null;
 		FileReader fr = null;
 		BufferedReader br = null;
 
 		try {
-			/* Apertura del fichero y creación de BufferedReader para poder
-			 *  hacer la lectura (disponer del método readLine())
+			/* Apertura del fichero y creación de BufferedReader 
+			 *  para poder hacer la lectura
 			 * */
-			archivo = new File("/Users/DAW 2º - Mañana/git/ConversorDivisas/WebContent/listadoBueno.txt");
-			fr = new FileReader(archivo.getAbsolutePath()); // pasa la ruta absoluta del fichero
+			archivo = this.getServletContext().getRealPath("listadoBueno.txt"); // pasa la ruta absoluta del fichero
+			fr = new FileReader(archivo); 
 			br = new BufferedReader(fr);
 
 			/* Lectura del fichero */
@@ -84,8 +84,8 @@ public class Conversor extends HttpServlet {
 				String codigo = linea.split("-")[0];
 				String valor = linea.split("-")[1];
 				String region = linea.split("-")[2];
-				moneda.add(valor);
-				moneda.add(region);
+				moneda.add(valor); // nombre de la moneda
+				moneda.add(region); // región de la moneda (ej: 'eur')
 				monedas.put(codigo, moneda);
 				}
 		} catch (Exception e) {
@@ -105,51 +105,6 @@ public class Conversor extends HttpServlet {
 		}
 		return monedas;
 		}
-
-	/**
-	 * Lee el fichero con el listado de todos los códigos
-	 * y nombres de monedas, devolviendo un HashMap
-	 * @return HashMap
-	 */
-	public HashMap<String, String> leeFichero () {
-		HashMap<String, String> monedas = new HashMap<String, String>();
-		String archivo = null;
-		FileReader fr = null;
-		BufferedReader br = null;
-
-		try {
-			/* Apertura del fichero y creación de BufferedReader para poder
-			 *  hacer la lectura (disponer del método readLine())
-			 * */
-			archivo = this.getServletContext().getRealPath("listadoBueno.txt");
-			fr = new FileReader(archivo); // pasa la ruta absoluta del fichero
-			br = new BufferedReader(fr);
-
-			/* Lectura del fichero */
-			String linea;
-			while ((linea = br.readLine()) != null) {
-				String codigo = linea.split("-")[0];
-				String moneda = linea.split("-")[1];
-				String region = linea.split("-")[2];
-				monedas.put(codigo, moneda);
-				}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			/* En el finally cerramos el fichero, para asegurarnos
-			  * que se cierra tanto si todo va bien como si salta
-			  * una excepción
-			  * */
-			try {
-				if (null != fr) {
-					fr.close();
-				}
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-		}
-		return monedas;
-	}
 	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -168,7 +123,7 @@ public class Conversor extends HttpServlet {
 			switch (oper) {
 				
 				case "Convertir":
-					if (validaNumero(request))  {
+					if (validaNumero(request))  { // el número es válido
 						conversor(request);
 						nuevaRuta = "conversion.jsp";
 					} else
@@ -184,7 +139,6 @@ public class Conversor extends HttpServlet {
 					break;
 				
 				case "Reiniciar":
-					//request.logout();
 					nuevaRuta = "conversor.jsp";
 					break;
 					

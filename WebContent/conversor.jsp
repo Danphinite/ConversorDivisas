@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%
-		/* Recoge el mapa con las monedas */
+		/* Recoge el mapa con las monedas y el array con los nombres */
 		HashMap<String, ArrayList<String>> monedas = (HashMap<String, ArrayList<String>>) application.getAttribute("monedas");
 		ArrayList<String> valores = (ArrayList<String>) application.getAttribute("valores");
 		
@@ -24,25 +24,30 @@
 			unidad2 = "USD";	
 	%>
 	<%!
+		/**Método que recoge y muestra en la lista desplegable los nombres y códigos de las monedas,
+		  * ordenados por región y alfabéticamente, para imprimirlos en el jsp
+		  */
 		public String escribeLista(HashMap<String, ArrayList<String>> monedas,
-															ArrayList<String> valores, String unidad) {
-			String html="";
+													  ArrayList<String> valores,
+													  String unidad) {
+			String html=""; // código que se imprimirá en pantalla
 			String[][] regiones = {{"Europa","eur"},{"Asia Occidental","aso"},{"Asia", "asi"},{"Asia Central","asc"},
 														{"Sur de Asia", "ass"},{"Sureste Asiático","sea"},{"Oceanía","oce"},
 														{"Norteamérica","amn"},{"Centroamérica","amc"},{"Suramérica","ams"},
 														{"Las Antillas","ant"},{"África","afr"},{"Otras Regiones","otr"},{"Onzas","oun"},
 														{"Otros (monedas obsoletas)","obs"}};
-			for (int i = 0; i < regiones.length; i++){
-				html+="\t<optgroup label=\"" + regiones[i][0] + "\">\n\t\t\t\t\t\t\t";
-				for (Object valor : valores) 
-					for (String codigo : monedas.keySet())
+			for (int i = 0; i < regiones.length; i++){ // recorre la matriz
+				html+="\t<optgroup label=\"" + regiones[i][0] + "\">\n\t\t\t\t\t\t\t"; // nombre de la región (ej: 'Europa')
+				for (Object valor : valores) // recorre el array con los nombres de monedas
+					for (String codigo : monedas.keySet()) // recorre el mapa para obtener el código de la moneda
 						if (monedas.get(codigo).get(0).equals(valor) && monedas.get(codigo).get(1).equals(regiones[i][1])){
+							/* cuando el nombre de la moneda coincide con el nombre y la región dentro del elemento del mapa */
 							html+="\t<option value=\"" + codigo+ "\"";
 							if (codigo.equals(unidad)) // selecciona la clave de la unidad anterior
 								html+=" selected";		// si es unidad1, por defecto "EUR"; unidad2 por defecto "USD"
 							html+=">" + (String)valor +" ("+codigo+")</option>\n\t\t\t\t\t\t\t";
 						}
-				html+="\t<option disabled></option>\n\t\t\t\t\t\t\t</optgroup>\n\t\t\t\t\t\t";
+				html+="\t<option disabled></option>\n\t\t\t\t\t\t\t</optgroup>\n\t\t\t\t\t\t"; // hueco en blanco
 			}
 			return html;
 		}
