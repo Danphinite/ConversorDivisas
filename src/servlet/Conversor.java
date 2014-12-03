@@ -88,7 +88,9 @@ public class Conversor extends HttpServlet {
 				moneda.add(region); // región de la moneda (ej: 'eur')
 				monedas.put(codigo, moneda);
 				}
-		} catch (Exception e) {
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			/* En el finally cerramos el fichero, para asegurarnos

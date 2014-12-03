@@ -45,7 +45,7 @@
 							html+="\t<option value=\"" + codigo+ "\"";
 							if (codigo.equals(unidad)) // selecciona la clave de la unidad anterior
 								html+=" selected";		// si es unidad1, por defecto "EUR"; unidad2 por defecto "USD"
-							html+=">" + (String)valor +" ("+codigo+")</option>\n\t\t\t\t\t\t\t";
+							html+=" style=\"background-image:(flags/"+ codigo + ".png); background-size: 15px;\">" + (String)valor +" ("+codigo+")</option>\n\t\t\t\t\t\t\t";
 						}
 				html+="\t<option disabled></option>\n\t\t\t\t\t\t\t</optgroup>\n\t\t\t\t\t\t"; // hueco en blanco
 			}
